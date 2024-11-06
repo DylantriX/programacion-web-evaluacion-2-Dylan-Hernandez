@@ -1,15 +1,13 @@
-CREATE DATABASE IF NOT EXISTS registro_evento_hernandez;
 USE registro_evento_hernandez;
-
 
 CREATE TABLE IF NOT EXISTS asistentes (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL,
-    rut VARCHAR(50) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    telefono VARCHAR(50) NOT NULL,
-    imagen TEXT NOT NULL,
-    codigo_qr TEXT NOT NULL,
+    nombre VARCHAR(20) NOT NULL,
+    rut VARCHAR(10) NOT NULL,
+    email VARCHAR(320) NOT NULL,
+    telefono VARCHAR(12) NOT NULL,
+    imagen VARCHAR(255) NOT NULL,
+    codigo_qr VARCHAR(255) NOT NULL,
     fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
