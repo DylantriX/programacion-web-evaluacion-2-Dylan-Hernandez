@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         
         $filename = $dir . 'qr_' . $id . '.png';
-        $contenido = 'http://localhost/prueba_2/ver_asistente.php?id=' . $id; // URL para ver la tarjeta del asistente
+        $contenido = 'http://localhost/prueba_2/ver_asistente.php?id=' . $id; 
         $tamanio = 10;
         $level = 'M';
         $frameSize = 3;
