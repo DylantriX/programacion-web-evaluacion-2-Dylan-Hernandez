@@ -1,5 +1,5 @@
 <?php
-// Conexión a la base de datos
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -7,15 +7,15 @@ $dbname = "registro_evento_hernandez";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verifica la conexión
+
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Obtener el id del asistente de la URL
+
 $id = $_GET['id'];
 
-// Consultar los datos del asistente
+
 $sql = "SELECT * FROM asistentes WHERE id='$id'";
 $result = $conn->query($sql);
 
@@ -48,7 +48,7 @@ $conn->close();
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: grid;
-            grid-template-columns: 60% 40%; /* 60% para la información, 40% para el QR */
+            grid-template-columns: 60% 40%; 
         }
 
         .ticket-info {
