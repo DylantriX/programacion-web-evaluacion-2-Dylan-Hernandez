@@ -7,14 +7,11 @@ $dbname = "registro_evento_hernandez";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-
 $id = $_GET['id'];
-
 
 $sql = "SELECT * FROM asistentes WHERE id='$id'";
 $result = $conn->query($sql);
@@ -101,7 +98,7 @@ $conn->close();
 
         <div class="ticket-qr">
             <h6>QR</h6>
-            <img src="<?php echo !empty($row['codigo_qr']) ? 'http://localhost/programacion-web-evaluacion-2-Dylan-Hernandez/Prueba_2/' . $row['codigo_qr'] : 'http://localhost/programacion-web-evaluacion-2-Dylan-Hernandez/Prueba_2/qr_por_defecto.png'; ?>" alt="Código QR">
+            <img src="<?php echo !empty($row['codigo_qr']) ? $row['codigo_qr'] : 'http://localhost/programacion-web-evaluacion-2-Dylan-Hernandez/Prueba_2/imagenes/qr_por_defecto.png'; ?>" alt="Código QR">
             <small>Escanea el QR para verificar</small>
         </div>
     </div>
